@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <head>
+        <title>Wovyn profile</title>
+        <script type='text/javascript' src="temp.js"></script>
+        <link rel='stylesheet' href ="style.css">
+    </head>
+    <body onload="getProfile();">
+        <h1> Sensor profile! </h1>
+        <iframe name="hiddenFrame" class="hide"></iframe>
+        <section class = "container">
+            <a href="home.html">Temperature readings</a>
+            <div id = form>
+                <form method="post" action="http://localhost:8080/sky/event/WUHjGzQa22Po6tzVcbQrVi/2/sensor/profile_updated" target="hiddenFrame">
+                    <fieldset>
+                            <div class="form-group">
+                                <label for="sensorName">Sensor Name:</label>
+                                <input name="sensorName" id="sensorName" />
+                            </div>
+                            <div class="form-group">
+                                <label for="sensorLocation">Sensor Location:</label>
+                                <input name="sensorLocation" id="sensorLocation" />
+                            </div>
+                            <div class="form-group">
+                                <label for="smsNumber">Sms Number:</label>
+                                <input name="smsNumber" id="smsNumber" />
+                            </div>
+                            <div class="form-group">
+                                <label for="threshold">Threshold:</label>
+                                <input name="threshold" id="threshold"/>
+                            </div>
+                            <input name="regbutton" type="submit" class="button" value="Update" />
+                        </fieldset>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

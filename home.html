@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <head>
+        <title>Pico temperatures</title>
+        <script type='text/javascript' src="temp.js"></script>
+        <link rel='stylesheet' href ="style.css">
+        <script>
+            window.setInterval(function(){getTemps();}, 5000);
+        </script>
+    </head>
+    <body onload="getTemps();">
+        <h1> My super cool awesome picoful temperature page! </h1>
+        <a href="profile.html">Sensor Profile</a>
+        <h2 id ="currentTemp"> The current temperature is: </h2>
+        <section class = "container">
+            <div class = "left">
+                <h2>Temperatures</h2>
+                <ul id = temps>
+                </ul>
+            </div>
+            <div class = "right">
+                <h2>Violations</h2>
+                <ul id = violations>
+                </ul>
+            </div>
+        </section>
+    </body>
+</html>
